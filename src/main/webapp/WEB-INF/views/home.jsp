@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Home</title>
+	
 </head>
 <body>
 <h1>
@@ -13,6 +14,9 @@
 
 <a href="./notice/noticeList">Notice</a>
 <a href="./memo/memoList">Memo</a>
+
+
+
 
 
 </body>

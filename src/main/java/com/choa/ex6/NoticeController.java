@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -29,7 +30,9 @@ public class NoticeController {
 	@RequestMapping(value="noticeList", method=RequestMethod.GET)
 	public String list(Model model, ListInfo listInfo) throws Exception{
 		List<BoardDTO> ar = noticeService.boardList(listInfo);
+		System.out.println(ar.get(1000).getTitle());
 		
+		//throw new IndexOutOfBoundsException();
 		model.addAttribute("list", ar);
 		model.addAttribute("listInfo", listInfo);
 		model.addAttribute("board", "notice");
@@ -105,4 +108,11 @@ public class NoticeController {
 		
 	}
 	
+	/*//익셉션 처리
+	@ExceptionHandler(Exception.class)
+	public String excetpion(){
+		
+		
+		return "error/notFound";
+	}*/
 }
