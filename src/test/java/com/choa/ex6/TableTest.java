@@ -18,10 +18,10 @@ public class TableTest extends MyAbstarctTestUnit{
 	@Test
 	public void test() throws Exception {
 		TableADTO tableADTO = new TableADTO();
-		tableADTO.setNum(2);
-		tableADTO.setTitle("t2");
-		tableADTO.setWriter("t2");
-		int result = tableservice.inserTable(tableADTO, 1);
+		tableADTO.setNum(4);
+		tableADTO.setTitle("t4");
+		tableADTO.setWriter("t4");
+		int result = tableservice.inserTable(tableADTO, 4);
 		assertEquals(1, result);
 	}
 

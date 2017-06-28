@@ -46,8 +46,8 @@
 	
 	<context:component-scan base-package="com.choa.ex6" />
 	<context:component-scan base-package="com.choa.notice"/>
-	<context:component-scan base-package="com.choa.aspect"/>
 	<context:component-scan base-package="com.choa.table"/>
+	<context:component-scan base-package="com.choa.aspect"/>
 	<!--aop를 어노테이션 방식으로 활용할 경우 아래의 코드를 써준다  -->
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	
